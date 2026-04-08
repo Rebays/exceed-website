@@ -5,46 +5,47 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-background">
-      {/* === BOLD GRADIENT LAYERS === */}
+    <section
+      className="relative min-h-screen flex items-center pt-20 overflow-hidden"
+      style={{
+        background: `
+          radial-gradient(ellipse 80% 60% at 10% 20%, rgba(19,181,211,0.35) 0%, transparent 60%),
+          radial-gradient(ellipse 70% 60% at 90% 80%, rgba(99,102,241,0.35) 0%, transparent 60%),
+          radial-gradient(ellipse 50% 40% at 50% 0%, rgba(19,181,211,0.18) 0%, transparent 50%),
+          #07090f
+        `,
+      }}
+    >
+      {/* Grid texture overlay */}
+      <div className="absolute inset-0 bg-grid opacity-[0.06] pointer-events-none" />
 
-      {/* Layer 1: Strong diagonal sweep — cyan top-left to purple bottom-right */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-secondary/20 to-transparent -z-10" />
-
-      {/* Layer 2: Counter-diagonal accent — purple top-right to transparent */}
-      <div className="absolute inset-0 bg-gradient-to-bl from-secondary/30 via-transparent to-primary/20 -z-10" />
-
-      {/* Layer 3: Radial glow at top-center — pure cyan bloom */}
+      {/* Cyan top-left bloom */}
       <div
-        className="absolute -z-10"
+        className="absolute pointer-events-none"
         style={{
-          top: "-10%",
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "900px",
-          height: "600px",
-          background: "radial-gradient(ellipse at center, rgba(19,181,211,0.28) 0%, transparent 70%)",
-          filter: "blur(60px)",
+          top: "-5%", left: "-5%",
+          width: 700, height: 700,
+          background: "radial-gradient(ellipse at center, rgba(19,181,211,0.22) 0%, transparent 65%)",
+          filter: "blur(70px)",
+          animation: "pulse-slow 14s ease-in-out infinite",
         }}
       />
 
-      {/* Layer 4: Purple bloom — bottom-left */}
+      {/* Purple bottom-right bloom */}
       <div
-        className="absolute bottom-[-15%] left-[-10%] -z-10"
+        className="absolute pointer-events-none"
         style={{
-          width: "700px",
-          height: "700px",
-          background: "radial-gradient(ellipse at center, rgba(99,102,241,0.35) 0%, transparent 65%)",
-          filter: "blur(80px)",
-          animation: "pulse-slow 12s ease-in-out infinite",
+          bottom: "-10%", right: "-5%",
+          width: 800, height: 800,
+          background: "radial-gradient(ellipse at center, rgba(99,102,241,0.25) 0%, transparent 65%)",
+          filter: "blur(90px)",
+          animation: "pulse-slow 16s ease-in-out infinite 2s",
         }}
       />
 
-      {/* Layer 5: Subtle grid texture */}
-      <div className="absolute inset-0 bg-grid opacity-[0.06] -z-10" />
+      {/* Bottom fade into page */}
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#07090f] to-transparent pointer-events-none" />
 
-      {/* Layer 6: Bottom fade into page */}
-      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent -z-10" />
 
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="flex flex-col gap-8 animate-in fade-in slide-in-from-left duration-1000">
