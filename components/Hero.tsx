@@ -5,10 +5,16 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-grid">
-      {/* Background Blobs */}
-      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/20 rounded-full blur-[128px] -z-10 animate-pulse" />
-      <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-secondary/20 rounded-full blur-[128px] -z-10 animate-pulse delay-700" />
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-background">
+      {/* Premium Mesh Gradient Background */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--color-primary),_transparent_70%),radial-gradient(ellipse_at_bottom_left,_var(--color-secondary),_transparent_70%),radial-gradient(circle_at_center,_var(--color-primary),_transparent_80%)] opacity-[0.12] -z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background -z-10" />
+      <div className="absolute inset-0 bg-grid opacity-[0.05] -z-10" />
+      
+      {/* Dynamic Background Blobs */}
+      <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-primary/25 rounded-full blur-[140px] -z-10 animate-pulse-slow" />
+      <div className="absolute bottom-[-10%] left-[-10%] w-[700px] h-[700px] bg-secondary/25 rounded-full blur-[160px] -z-10 animate-pulse-slow delay-1000" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/10 rounded-full blur-[120px] -z-10 rotate-45" />
 
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="flex flex-col gap-8 animate-in fade-in slide-in-from-left duration-1000">
