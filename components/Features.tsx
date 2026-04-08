@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { 
   Zap, 
   Shield, 
@@ -14,37 +15,43 @@ const features = [
     title: "Strategic Consulting",
     desc: "Bespoke strategies to navigate complex enterprise challenges and drive sustainable growth.",
     icon: <Globe className="w-8 h-8" />,
-    color: "from-cyan-500 to-blue-500"
+    color: "from-cyan-500 to-blue-500",
+    image: "/features/strategic-consulting.png"
   },
   {
     title: "Advanced Technology",
     desc: "Next-generation software and infrastructure solutions built for scale and security.",
     icon: <Cpu className="w-8 h-8" />,
-    color: "from-blue-500 to-indigo-500"
+    color: "from-blue-500 to-indigo-500",
+    image: "/features/advanced-technology.png"
   },
   {
     title: "Data Intelligence",
     desc: "Turn your raw data into actionable insights with our premium analytics engine.",
     icon: <BarChart3 className="w-8 h-8" />,
-    color: "from-indigo-500 to-purple-500"
+    color: "from-indigo-500 to-purple-500",
+    image: "/features/data-intelligence.png"
   },
   {
     title: "Cyber Resilience",
     desc: "Enterprise-grade security protocols to protect your most valuable digital assets.",
     icon: <Shield className="w-8 h-8" />,
-    color: "from-purple-500 to-rose-500"
+    color: "from-purple-500 to-rose-500",
+    image: "/features/data-intelligence.png" // Placeholder
   },
   {
     title: "Operational Velocity",
     desc: "Optimize your workflows and accelerate time-to-market with automated processes.",
     icon: <Zap className="w-8 h-8" />,
-    color: "from-rose-500 to-orange-500"
+    color: "from-rose-500 to-orange-500",
+    image: "/features/operational-velocity.png"
   },
   {
     title: "Scale Engineering",
     desc: "Grow without limits using our cloud-native architecture and distributed systems.",
     icon: <Rocket className="w-8 h-8" />,
-    color: "from-orange-500 to-cyan-500"
+    color: "from-orange-500 to-cyan-500",
+    image: "/features/advanced-technology.png" // Placeholder
   }
 ];
 
@@ -69,18 +76,31 @@ export default function Features() {
           {features.map((feature, idx) => (
             <div 
               key={idx}
-              className="group glass p-8 rounded-[2.5rem] border-border/50 hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/5"
+              className="group glass flex flex-col rounded-[2.5rem] border-border/50 hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/5 overflow-hidden"
             >
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center text-white mb-8 shadow-lg group-hover:scale-110 transition-transform duration-500`}>
-                {feature.icon}
+              {/* Image Header */}
+              <div className="relative h-48 w-full overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/20 z-10" />
+                <Image
+                  src={feature.image}
+                  alt={feature.title}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                />
               </div>
-              <h4 className="text-2xl font-bold mb-4">{feature.title}</h4>
-              <p className="text-foreground/60 leading-relaxed">
-                {feature.desc}
-              </p>
-              <div className="mt-8 flex items-center gap-2 text-sm font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                Learn more 
-                <div className="w-4 h-px bg-primary group-hover:w-8 transition-all" />
+
+              <div className="p-8 pt-6">
+                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 transition-transform duration-500 relative z-20 -mt-12 border-4 border-background`}>
+                  {feature.icon}
+                </div>
+                <h4 className="text-2xl font-bold mb-4">{feature.title}</h4>
+                <p className="text-foreground/60 leading-relaxed text-sm">
+                  {feature.desc}
+                </p>
+                <div className="mt-8 flex items-center gap-2 text-sm font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  Learn more 
+                  <div className="w-4 h-px bg-primary group-hover:w-8 transition-all" />
+                </div>
               </div>
             </div>
           ))}

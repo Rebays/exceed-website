@@ -6,15 +6,45 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-background">
-      {/* Premium Mesh Gradient Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--color-primary),_transparent_70%),radial-gradient(ellipse_at_bottom_left,_var(--color-secondary),_transparent_70%),radial-gradient(circle_at_center,_var(--color-primary),_transparent_80%)] opacity-[0.12] -z-10" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background -z-10" />
-      <div className="absolute inset-0 bg-grid opacity-[0.05] -z-10" />
-      
-      {/* Dynamic Background Blobs */}
-      <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-primary/25 rounded-full blur-[140px] -z-10 animate-pulse-slow" />
-      <div className="absolute bottom-[-10%] left-[-10%] w-[700px] h-[700px] bg-secondary/25 rounded-full blur-[160px] -z-10 animate-pulse-slow delay-1000" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/10 rounded-full blur-[120px] -z-10 rotate-45" />
+      {/* === BOLD GRADIENT LAYERS === */}
+
+      {/* Layer 1: Strong diagonal sweep — cyan top-left to purple bottom-right */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-secondary/20 to-transparent -z-10" />
+
+      {/* Layer 2: Counter-diagonal accent — purple top-right to transparent */}
+      <div className="absolute inset-0 bg-gradient-to-bl from-secondary/30 via-transparent to-primary/20 -z-10" />
+
+      {/* Layer 3: Radial glow at top-center — pure cyan bloom */}
+      <div
+        className="absolute -z-10"
+        style={{
+          top: "-10%",
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "900px",
+          height: "600px",
+          background: "radial-gradient(ellipse at center, rgba(19,181,211,0.28) 0%, transparent 70%)",
+          filter: "blur(60px)",
+        }}
+      />
+
+      {/* Layer 4: Purple bloom — bottom-left */}
+      <div
+        className="absolute bottom-[-15%] left-[-10%] -z-10"
+        style={{
+          width: "700px",
+          height: "700px",
+          background: "radial-gradient(ellipse at center, rgba(99,102,241,0.35) 0%, transparent 65%)",
+          filter: "blur(80px)",
+          animation: "pulse-slow 12s ease-in-out infinite",
+        }}
+      />
+
+      {/* Layer 5: Subtle grid texture */}
+      <div className="absolute inset-0 bg-grid opacity-[0.06] -z-10" />
+
+      {/* Layer 6: Bottom fade into page */}
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent -z-10" />
 
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="flex flex-col gap-8 animate-in fade-in slide-in-from-left duration-1000">

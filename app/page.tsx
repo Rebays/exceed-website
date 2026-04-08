@@ -12,7 +12,7 @@ export default function Home() {
       {/* Trust/Social Proof Section */}
       <section className="py-24 bg-accent/20 border-y border-border/50">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-foreground/40 text-sm font-bold uppercase tracking-[0.2em] mb-12">
+          <p className="text-secondary/60 text-sm font-bold uppercase tracking-[0.2em] mb-12">
             Strategic Partners
           </p>
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
