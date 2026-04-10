@@ -67,7 +67,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-lg md:text-xl text-foreground/60 max-w-xl leading-relaxed">
-            Exceed Enterprise Limited delivers premium branding, high-quality signage, robust physical fabrication, 
+            Exceed Enterprise Limited delivers premium branding, high-quality signage, robust physical fabrication,
             and custom software solutions engineered to set your business aggressively apart.
           </p>
 
@@ -83,7 +83,7 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="flex items-center gap-4 pt-8 border-t border-border/50">
+          {/* <div className="flex items-center gap-4 pt-8 border-t border-border/50">
             <div className="flex -space-x-3">
               {[1, 2, 3, 4].map((i) => (
                 <div key={i} className="w-10 h-10 rounded-full border-2 border-background bg-accent overflow-hidden">
@@ -99,7 +99,7 @@ export default function Hero() {
             <p className="text-sm text-foreground/50">
               Trusted by <span className="text-foreground font-bold font-mono">500+</span> global enterprises
             </p>
-          </div>
+          </div> */}
         </div>
 
         <div className="relative aspect-square lg:aspect-auto h-[600px] animate-in fade-in slide-in-from-right duration-1000">
@@ -113,7 +113,7 @@ export default function Hero() {
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
-            
+
             {/* Floating Card */}
             <div className="absolute bottom-8 left-8 right-8 glass p-6 rounded-2xl border-white/20 shadow-xl flex items-center gap-4 animate-bounce-slow">
               <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary">
