@@ -10,9 +10,9 @@ export default function AboutPage() {
   ];
 
   const leaders = [
-    { name: "Eleanor Vance", role: "Chief Executive Officer", image: "/placeholder-1.jpg", bio: "Former VP at McKinsey with 15 years in enterprise strategy." },
-    { name: "Marcus Chen", role: "Chief Technology Officer", image: "/placeholder-2.jpg", bio: "Pioneer in distributed systems and cloud architecture." },
-    { name: "Sarah Jenkins", role: "Head of Global Operations", image: "/placeholder-3.jpg", bio: "Expert in operational scaling and cross-border expansion." },
+    { name: "Simbi Jama", role: "Chief Executive Officer", image: "/placeholder-1.jpg", bio: "CEO of Exceed Enterprise Limited with 15 years in enterprise strategy." },
+    { name: "Bradon Tupiti", role: "Chief Technology Officer", image: "/placeholder-2.jpg", bio: "Pioneer in distributed systems and cloud architecture." },
+    { name: "Carlos Saliga", role: "Head of Global Operations", image: "/placeholder-3.jpg", bio: "Expert in operational scaling and cross-border expansion." },
   ];
 
   return (
@@ -20,17 +20,17 @@ export default function AboutPage() {
       {/* Background Orbs */}
       <div className="absolute top-1/4 left-0 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[150px] -z-10" />
       <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] -z-10" />
-      
+
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="max-w-4xl mx-auto text-center mb-32 animate-in fade-in slide-in-from-bottom-8 duration-700">
           <p className="text-secondary font-bold tracking-widest uppercase text-sm mb-4">Our Story</p>
           <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-tight leading-tight">
-            Redefining <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Excellence</span> <br/>
+            Redefining <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Excellence</span> <br />
             in the Digital Age.
           </h1>
           <p className="text-xl text-foreground/70 leading-relaxed max-w-2xl mx-auto">
-            Exceed Enterprise Limited was founded on the principle that businesses should never have to settle for "good enough." 
+            Exceed Enterprise Limited was founded on the principle that businesses should never have to settle for "good enough."
             We push the boundaries of what's possible in strategy, technology, and operations.
           </p>
         </div>
