@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Exceed Enterprise Limited | Global Innovation & Strategy",
-  description: "Exceed Your Potential with World-Class Consulting and Technological Excellence.",
+  title: "Exceed Enterprise Limited | Signage, Branding & Software Development",
+  description: "Exceed your expectations with premium design, fabrication, and custom software solutions.",
   icons: {
     icon: "/favicon.ico",
   },

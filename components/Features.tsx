@@ -12,46 +12,46 @@ import {
 
 const features = [
   {
-    title: "Strategic Consulting",
-    desc: "Bespoke strategies to navigate complex enterprise challenges and drive sustainable growth.",
+    title: "Design & Branding",
+    desc: "From corporate rebranding to social media marketing and photography.",
     icon: <Globe className="w-8 h-8" />,
     color: "from-cyan-500 to-blue-500",
     image: "/features/strategic-consulting.png"
   },
   {
-    title: "Advanced Technology",
-    desc: "Next-generation software and infrastructure solutions built for scale and security.",
-    icon: <Cpu className="w-8 h-8" />,
-    color: "from-blue-500 to-indigo-500",
+    title: "Signage & Billboards",
+    desc: "Manufacturing and installing high-quality LED signs, lightboxes, and billboards.",
+    icon: <Zap className="w-8 h-8" />,
+    color: "from-orange-500 to-red-500",
     image: "/features/advanced-technology.png"
   },
   {
-    title: "Data Intelligence",
-    desc: "Turn your raw data into actionable insights with our premium analytics engine.",
-    icon: <BarChart3 className="w-8 h-8" />,
-    color: "from-indigo-500 to-purple-500",
+    title: "Vehicle Wraps",
+    desc: "Premium vehicle and boat wraps, one way vision, frosting, and stickers.",
+    icon: <Rocket className="w-8 h-8" />,
+    color: "from-blue-500 to-indigo-500",
     image: "/features/data-intelligence.png"
   },
   {
-    title: "Cyber Resilience",
-    desc: "Enterprise-grade security protocols to protect your most valuable digital assets.",
-    icon: <Shield className="w-8 h-8" />,
-    color: "from-purple-500 to-rose-500",
-    image: "/features/data-intelligence.png" // Placeholder
-  },
-  {
-    title: "Operational Velocity",
-    desc: "Optimize your workflows and accelerate time-to-market with automated processes.",
-    icon: <Zap className="w-8 h-8" />,
-    color: "from-rose-500 to-orange-500",
+    title: "Software Development",
+    desc: "Custom software solutions, web applications, and enterprise systems.",
+    icon: <Cpu className="w-8 h-8" />,
+    color: "from-indigo-500 to-purple-500",
     image: "/features/operational-velocity.png"
   },
   {
-    title: "Scale Engineering",
-    desc: "Grow without limits using our cloud-native architecture and distributed systems.",
-    icon: <Rocket className="w-8 h-8" />,
-    color: "from-orange-500 to-cyan-500",
-    image: "/features/advanced-technology.png" // Placeholder
+    title: "Print & Merchandise",
+    desc: "Posters, business cards, PVC ID cards, t-shirts, and custom merchandise.",
+    icon: <BarChart3 className="w-8 h-8" />,
+    color: "from-purple-500 to-rose-500",
+    image: "/features/data-intelligence.png"
+  },
+  {
+    title: "Fabrication & Displays",
+    desc: "Welding, fabrication, and premium WaveLight Media Displays.",
+    icon: <Shield className="w-8 h-8" />,
+    color: "from-rose-500 to-orange-500",
+    image: "/features/advanced-technology.png"
   }
 ];
 

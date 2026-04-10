@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, ChevronRight } from "lucide-react";
 
 export default function Hero() {
@@ -52,35 +53,34 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 bg-accent/50 border border-border px-4 py-2 rounded-full w-fit backdrop-blur-sm">
             <span className="flex h-2 w-2 rounded-full bg-primary animate-ping" />
             <span className="text-xs font-bold tracking-wider uppercase text-foreground/70">
-              Enterprise Excellence
+              Creative Excellence & Engineering
             </span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight">
-            Exceed Your <br />
+            Elevate Your <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-              Potential
+              Brand
             </span>{" "}
-            with <br />
-            Innovation
+            & <br />
+            Identity
           </h1>
 
           <p className="text-lg md:text-xl text-foreground/60 max-w-xl leading-relaxed">
-            Exceed Enterprise Limited provides world-class consulting and 
-            technological solutions designed to scale your business and 
-            outpace the competition.
+            Exceed Enterprise Limited delivers premium branding, high-quality signage, robust physical fabrication, 
+            and custom software solutions engineered to set your business aggressively apart.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <button className="group relative bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full font-bold transition-all shadow-xl shadow-cyan-500/20 active:scale-95 flex items-center justify-center gap-2 overflow-hidden">
+            <Link href="/#contact" className="group relative bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full font-bold transition-all shadow-xl shadow-cyan-500/20 active:scale-95 flex items-center justify-center gap-2 overflow-hidden">
               <span className="relative z-10">Get Started</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-            </button>
-            <button className="flex items-center justify-center gap-2 group glass px-8 py-4 rounded-full font-bold text-foreground/80 hover:text-foreground transition-all hover:border-primary/50">
+            </Link>
+            <Link href="/solutions" className="flex items-center justify-center gap-2 group glass px-8 py-4 rounded-full font-bold text-foreground/80 hover:text-foreground transition-all hover:border-primary/50">
               Our Solutions
               <ChevronRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
-            </button>
+            </Link>
           </div>
 
           <div className="flex items-center gap-4 pt-8 border-t border-border/50">

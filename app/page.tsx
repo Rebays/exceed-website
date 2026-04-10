@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Hero />
-      
+
       {/* Services/Features Section */}
       <Features />
 
@@ -29,7 +29,7 @@ export default function Home() {
       {/* Mission Section */}
       <section id="about" className="py-32 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary/5 rounded-full blur-[120px] -z-10" />
-        
+
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-5xl font-bold mb-10 leading-tight">
@@ -37,14 +37,14 @@ export default function Home() {
               <span className="text-secondary">Enterprise Excellence</span>
             </h2>
             <p className="text-xl text-foreground/60 leading-relaxed mb-12">
-              Exceed Enterprise Limited was founded on the principle that 
-              businesses should never have to settle for "good enough." 
+              Exceed Enterprise Limited was founded on the principle that
+              businesses should never have to settle for "good enough."
               We push the boundaries of what's possible in strategy and technology.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
               {[
-                { label: "Vision", value: "To be the global benchmark for innovation." },
-                { label: "Values", value: "Integrity, Velocity, and Impact in every project." },
+                { label: "Vision", value: "To be trusted, innovative and profitable." },
+                { label: "Mission", value: "To deliver and exceed customers expectation." },
                 { label: "Impact", value: "Delivering measurable results for our clients." }
               ].map((item, i) => (
                 <div key={i} className="glass p-8 rounded-3xl border-border/40">
@@ -60,7 +60,7 @@ export default function Home() {
       {/* CTA Section */}
       <section id="contact" className="py-24 bg-primary text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[100px] -z-0 translate-x-1/2 -translate-y-1/2" />
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             <div className="max-w-2xl text-center lg:text-left">
@@ -70,9 +70,9 @@ export default function Home() {
               </p>
             </div>
             <div className="flex gap-4">
-              <button className="bg-white text-primary hover:bg-cyan-50 px-10 py-5 rounded-full font-bold transition-all shadow-xl active:scale-95">
+              <a href="mailto:simbi@exceed.com.sb" className="bg-white text-primary hover:bg-cyan-50 px-10 py-5 rounded-full font-bold transition-all shadow-xl active:scale-95 inline-block">
                 Contact Strategy Team
-              </button>
+              </a>
             </div>
           </div>
         </div>
