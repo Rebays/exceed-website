@@ -17,7 +17,7 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
             {/* Using text logos for now as placeholders for partner icons */}
-            {["FORBES", "TECHCRUNCH", "WIRED", "BLOOMBERG", "VERGE"].map((partner) => (
+            {["ORG CLINIC", "REBAYS", "SIG", "GOLS"].map((partner) => (
               <span key={partner} className="text-2xl font-black tracking-tighter">
                 {partner}
               </span>
